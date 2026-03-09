@@ -1,10 +1,10 @@
 import { ServiceItem } from './types';
 
 // Real API URL for Google Apps Script (Courses/Leads)
-export const API_URL = "https://script.google.com/macros/s/AKfycbydQ_R7RuDz-SjleaiHFe5AI5bHzZ3psra9kuX_a-PvT8Dblwp-H26eQssXQmsnMsTdQQ/exec";
+export const API_URL = "https://script.google.com/macros/s/AKfycbyv7I2NpoVOvVX_PdULP3LoYGU0-OSKnWBNHazMbHEDl6IZklq3ln8p6bXePu-SKq7SKw/exec";
 
 // Real API URL for News/Ticker
-export const NEWS_API_URL = "https://script.google.com/macros/s/AKfycbydQ_R7RuDz-SjleaiHFe5AI5bHzZ3psra9kuX_a-PvT8Dblwp-H26eQssXQmsnMsTdQQ/exec";
+export const NEWS_API_URL = "https://script.google.com/macros/s/AKfycbyv7I2NpoVOvVX_PdULP3LoYGU0-OSKnWBNHazMbHEDl6IZklq3ln8p6bXePu-SKq7SKw/exec";
 
 export const SERVICES: ServiceItem[] = [
   {
@@ -14,7 +14,7 @@ export const SERVICES: ServiceItem[] = [
     icon: 'globe',
     details: [
       {
-        content: 'אירועים חברתיים המגובשים בזכות פעילות של סדנה או הרצאה מרתקת בתחום האן אל פי ובה משתתפים הצופים, הדרכת קורס אן אל פי המונה 20 מפגשים כאשר של מפגש בן 4 שעות אחת לשבוע.'
+        content: 'אירועים חברתיים המגובשים בזכות פעילות של סדנה או הרצאה מרתקת בתחום האן אל פי ובה משתתפים הצופים, הדרכת קורס אן אל פי המונה 10, 20 או 30 מפגשים כאשר של מפגש בן 3 שעות אחת לשבוע.'
       },
       {
         title: 'הדרכת כללים לפי תאום ותיעול צורכי הלקוח',

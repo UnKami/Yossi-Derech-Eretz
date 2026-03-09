@@ -231,7 +231,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 bg-teal-600 hover:bg-teal-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center justify-center group"
+          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center justify-center group"
         >
           <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
           <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white"></span>
@@ -247,15 +247,15 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
         <div className="fixed bottom-6 right-6 z-50 w-[90vw] md:w-96 h-[500px] max-h-[80vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-slideUp border border-gray-100 font-sans">
           
           {/* Header */}
-          <div className="bg-gradient-to-l from-teal-700 to-teal-600 p-4 flex justify-between items-center shadow-md relative z-10">
+          <div className="bg-gradient-to-l from-blue-700 to-blue-600 p-4 flex justify-between items-center shadow-md relative z-10">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white backdrop-blur-sm">
                 <Icons.Bot size={22} />
               </div>
               <div>
                 <h3 className="text-white font-bold text-lg leading-none">יוסי כהן AI</h3>
-                <span className="text-teal-100 text-xs flex items-center gap-1 mt-1">
-                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span className="text-blue-100 text-xs flex items-center gap-1 mt-1">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
                   מחובר כעת
                 </span>
               </div>
@@ -285,22 +285,22 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
               <div className="absolute inset-0 z-20 bg-white/95 backdrop-blur-sm p-6 flex flex-col justify-center animate-fadeIn">
                  {formSuccess ? (
                     <div className="text-center">
-                       <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+                       <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
                          <Icons.CheckCircle size={32} />
                        </div>
-                       <h3 className="text-xl font-bold text-teal-900 mb-2">הפרטים נשלחו!</h3>
+                       <h3 className="text-xl font-bold text-blue-900 mb-2">הפרטים נשלחו!</h3>
                        <p className="text-gray-600 text-sm">ניצור איתך קשר בהקדם.</p>
                        <button 
                          onClick={() => setShowContactForm(false)} 
-                         className="mt-6 text-teal-600 font-medium hover:underline text-sm"
+                         className="mt-6 text-blue-600 font-medium hover:underline text-sm"
                        >
                          חזור לצ'אט
                        </button>
                     </div>
                  ) : (
-                    <form onSubmit={handleManualSubmit} className="space-y-4">
+                     <form onSubmit={handleManualSubmit} className="space-y-4">
                       <div className="text-center mb-6">
-                        <div className="w-12 h-12 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
                            <Icons.Users size={24} />
                         </div>
                         <h3 className="text-xl font-bold text-gray-800">נשמח לחזור אליך</h3>
@@ -314,7 +314,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
                           required
                           value={contactName}
                           onChange={(e) => setContactName(e.target.value)}
-                          className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-teal-500 outline-none transition-all"
+                          className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all"
                           placeholder="ישראל ישראלי"
                         />
                       </div>
@@ -325,7 +325,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
                           required
                           value={contactEmail}
                           onChange={(e) => setContactEmail(e.target.value)}
-                          className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-teal-500 outline-none transition-all"
+                          className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all"
                           placeholder="example@email.com"
                         />
                       </div>
@@ -341,7 +341,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
                         <button 
                           type="submit" 
                           disabled={isSubmittingForm}
-                          className="flex-1 py-3 bg-teal-600 text-white text-sm font-bold rounded-xl hover:bg-teal-700 shadow-lg hover:shadow-xl transition-all disabled:opacity-70 flex items-center justify-center gap-2"
+                          className="flex-1 py-3 bg-blue-600 text-white text-sm font-bold rounded-xl hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all disabled:opacity-70 flex items-center justify-center gap-2"
                         >
                           {isSubmittingForm ? <Icons.Loader2 size={16} className="animate-spin" /> : 'שליחה'}
                         </button>
@@ -361,7 +361,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
                   <div 
                     className={`max-w-[85%] p-3 rounded-2xl shadow-sm text-sm leading-relaxed ${
                       msg.role === 'user' 
-                        ? 'bg-teal-600 text-white rounded-tl-none' 
+                        ? 'bg-blue-600 text-white rounded-tl-none' 
                         : 'bg-white text-gray-800 border border-gray-100 rounded-tr-none'
                     }`}
                   >
@@ -374,9 +374,9 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
                 <div className="flex justify-start">
                   <div className="bg-white p-4 rounded-2xl rounded-tr-none border border-gray-100 shadow-sm">
                     <div className="flex gap-1.5">
-                      <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                      <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                      <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                     </div>
                   </div>
                 </div>
@@ -394,12 +394,12 @@ const ChatBot: React.FC<ChatBotProps> = ({ courses }) => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyPress}
                 placeholder="כתוב הודעה..."
-                className="w-full pl-10 pr-4 py-3 bg-gray-100 rounded-xl focus:bg-white focus:ring-2 focus:ring-teal-500 transition-all outline-none text-gray-800 placeholder-gray-400"
+                className="w-full pl-10 pr-4 py-3 bg-gray-100 rounded-xl focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all outline-none text-gray-800 placeholder-gray-400"
               />
               <button
                 onClick={handleSend}
                 disabled={!input.trim() || isLoading}
-                className="absolute left-2 p-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:opacity-50 disabled:hover:bg-teal-600 transition-colors shadow-sm"
+                className="absolute left-2 p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:hover:bg-blue-600 transition-colors shadow-sm"
               >
                 <Icons.Send size={18} className={isLoading ? 'opacity-0' : 'opacity-100'} />
                 {isLoading && <Icons.Loader2 size={18} className="absolute top-2 left-2 animate-spin" />}

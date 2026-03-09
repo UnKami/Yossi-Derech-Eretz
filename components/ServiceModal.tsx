@@ -12,7 +12,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
   if (!isOpen || !service) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-teal-950/70 backdrop-blur-sm" dir="rtl" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-blue-950/70 backdrop-blur-sm" dir="rtl" onClick={onClose}>
       <div 
         className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-fadeIn" 
         onClick={(e) => e.stopPropagation()}
@@ -20,7 +20,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
         {/* Header */}
         <div className="bg-white p-6 pb-2 shrink-0 flex justify-between items-start">
           <div className="pr-2">
-            <h2 className="text-3xl font-bold text-teal-600 mb-2">{service.title}</h2>
+            <h2 className="text-3xl font-bold text-blue-600 mb-2">{service.title}</h2>
           </div>
           <button 
             onClick={onClose}
@@ -49,7 +49,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
         </div>
 
         {/* Footer decoration */}
-        <div className="h-2 bg-gradient-to-r from-teal-500 to-green-400 w-full shrink-0"></div>
+        <div className="h-2 bg-gradient-to-r from-blue-500 to-indigo-400 w-full shrink-0"></div>
       </div>
     </div>
   );

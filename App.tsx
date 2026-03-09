@@ -3,6 +3,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import PublicHome from './components/PublicHome';
 import MemberHub from './components/MemberHub';
+import AccessibilityMenu from './components/AccessibilityMenu';
 import { User } from './types';
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
@@ -51,6 +52,16 @@ function App() {
     console.error("Google Login Failed");
   };
 
+  const handleMockLogin = () => {
+    const mockUser: User = {
+      id: "mock-123",
+      name: "אורח",
+      email: "guest@example.com",
+      avatar: "https://i.postimg.cc/3NrR58RR/lwgw-hds.png"
+    };
+    setUser(mockUser);
+  };
+
   const handleLogout = () => {
     setUser(null);
   };
@@ -64,8 +75,10 @@ function App() {
               <PublicHome 
                 onLoginSuccess={handleLoginSuccess} 
                 onLoginError={handleLoginError} 
+                onMockLogin={handleMockLogin}
               />
           )}
+          <AccessibilityMenu />
       </PayPalScriptProvider>
     </GoogleOAuthProvider>
   );

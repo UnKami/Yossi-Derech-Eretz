@@ -46,4 +46,26 @@ export interface NewsItem {
   link?: string;
 }
 
-export type HubView = 'dashboard' | 'vault' | 'academy' | 'square' | 'live';
+export interface Comment {
+  id: string;
+  userId: string;
+  userName: string;
+  userAvatar?: string;
+  content: string;
+  date: string;
+}
+
+export interface Post {
+  id: string;
+  userId: string;
+  userName: string;
+  userAvatar?: string;
+  content: string;
+  mediaUrl?: string;
+  mediaType?: 'image' | 'video';
+  date: string;
+  status: 'pending' | 'approved';
+  comments?: Comment[];
+}
+
+export type HubView = 'dashboard' | 'vault' | 'academy' | 'square' | 'live' | 'open-chat';

@@ -83,8 +83,8 @@ const PayPalPayment: React.FC<PayPalPaymentProps> = ({ course, onSuccess, onErro
   if (!isResolved) {
       return (
         <div className="flex flex-col items-center justify-center py-8 min-h-[150px]">
-          <Icons.Loader2 className="w-8 h-8 text-teal-600 animate-spin mb-2" />
-          <span className="text-sm text-teal-600 font-medium">טוען מערכת תשלום מאובטחת...</span>
+          <Icons.Loader2 className="w-8 h-8 text-blue-600 animate-spin mb-2" />
+          <span className="text-sm text-blue-600 font-medium">טוען מערכת תשלום מאובטחת...</span>
         </div>
       );
   }

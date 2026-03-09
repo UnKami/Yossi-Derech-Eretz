@@ -86,11 +86,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
   if (!isOpen || !course) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-teal-950/70 backdrop-blur-sm" dir="rtl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-blue-950/70 backdrop-blur-sm" dir="rtl">
       <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
         
         {/* Header */}
-        <div className="bg-gradient-to-l from-teal-700 to-teal-600 p-6 text-white shrink-0">
+        <div className="bg-gradient-to-l from-blue-700 to-blue-600 p-6 text-white shrink-0">
           <button 
             onClick={handleClose}
             className="absolute top-4 left-4 text-white/80 hover:text-white transition-colors"
@@ -100,7 +100,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
           <h2 className="text-2xl font-bold mb-1">
             {step === 3 ? 'אישור הרשמה' : 'הרשמה לקורס'}
           </h2>
-          <p className="text-teal-50 opacity-90 text-sm truncate">{course.title}</p>
+          <p className="text-blue-50 opacity-90 text-sm truncate">{course.title}</p>
         </div>
 
         {/* Content Body */}
@@ -117,7 +117,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
                   placeholder="ישראל ישראלי"
                 />
               </div>
@@ -130,7 +130,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
                   required
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
                   placeholder="050-0000000"
                 />
               </div>
@@ -143,7 +143,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
                   placeholder="example@email.com"
                 />
               </div>
@@ -151,7 +151,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 rounded-xl shadow-lg transform transition hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg transform transition hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   המשך לתשלום
                   <Icons.CreditCard size={18} />
@@ -164,16 +164,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
           {step === 2 && (
             <div className="space-y-6 animate-fadeIn">
               {/* Order Summary Card */}
-              <div className="bg-teal-50 rounded-xl p-4 border border-teal-100">
-                <h3 className="text-teal-800 font-bold mb-3 text-sm">סיכום הזמנה</h3>
+              <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
+                <h3 className="text-blue-800 font-bold mb-3 text-sm">סיכום הזמנה</h3>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-gray-600 text-sm">{course.title}</span>
                   <span className="font-bold text-gray-800">{course.price.toLocaleString()} ₪</span>
                 </div>
-                <div className="h-px bg-teal-200/50 my-2"></div>
+                <div className="h-px bg-blue-200/50 my-2"></div>
                 <div className="flex justify-between items-center">
-                  <span className="font-bold text-teal-800">סה"כ לתשלום</span>
-                  <span className="font-bold text-teal-800 text-lg">{course.price.toLocaleString()} ₪</span>
+                  <span className="font-bold text-blue-800">סה"כ לתשלום</span>
+                  <span className="font-bold text-blue-800 text-lg">{course.price.toLocaleString()} ₪</span>
                 </div>
               </div>
 
@@ -181,8 +181,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
               <div className="min-h-[150px]">
                 {isProcessing ? (
                    <div className="flex flex-col items-center justify-center py-8">
-                     <Icons.Loader2 className="w-8 h-8 text-teal-600 animate-spin mb-2" />
-                     <span className="text-sm text-teal-600 font-medium">מעבד תשלום...</span>
+                     <Icons.Loader2 className="w-8 h-8 text-blue-600 animate-spin mb-2" />
+                     <span className="text-sm text-blue-600 font-medium">מעבד תשלום...</span>
                    </div>
                 ) : (
                     <PayPalPayment 
@@ -197,7 +197,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
               <button
                 onClick={() => setStep(1)}
                 disabled={isProcessing}
-                className="w-full flex items-center justify-center gap-2 text-gray-500 hover:text-teal-600 font-medium py-2 transition-colors text-sm disabled:opacity-50"
+                className="w-full flex items-center justify-center gap-2 text-gray-500 hover:text-blue-600 font-medium py-2 transition-colors text-sm disabled:opacity-50"
               >
                 <Icons.ArrowRight size={16} />
                 חזרה לעריכת פרטים
@@ -209,13 +209,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
           {step === 3 && (
             <div className="text-center py-6 animate-fadeIn">
               <div className="relative w-20 h-20 mx-auto mb-6">
-                <div className="absolute inset-0 bg-green-100 rounded-full animate-ping opacity-75"></div>
-                <div className="relative bg-gradient-to-br from-green-500 to-teal-600 rounded-full w-20 h-20 flex items-center justify-center shadow-xl text-white">
+                <div className="absolute inset-0 bg-blue-100 rounded-full animate-ping opacity-75"></div>
+                <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 rounded-full w-20 h-20 flex items-center justify-center shadow-xl text-white">
                   <Icons.CheckCircle size={40} />
                 </div>
               </div>
               
-              <h3 className="text-2xl font-bold text-teal-900 mb-2">התשלום עבר בהצלחה!</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-2">התשלום עבר בהצלחה!</h3>
               <p className="text-gray-600 mb-6 max-w-xs mx-auto">
                 תודה שנרשמת לקורס <strong>{course.title}</strong>.
                 <br />
@@ -224,7 +224,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, course }) => {
               
               <button 
                 onClick={handleClose}
-                className="text-teal-600 font-semibold hover:text-teal-800 transition-colors"
+                className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
               >
                 סגור חלונית
               </button>

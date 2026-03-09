@@ -102,8 +102,8 @@ const Vault: React.FC<VaultProps> = ({ user }) => {
         {/* Vault Header */}
         <div className="bg-gray-50 border-b border-gray-100 p-4 flex justify-between items-center">
             <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="font-mono text-xs text-gray-400 uppercase tracking-widest">THE VAULT // SECURE CHANNEL</span>
+                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                <span className="font-mono text-xs text-gray-400 uppercase tracking-widest">PERSONAL AI COACHING // SECURE CHANNEL</span>
             </div>
             <Icons.Bot className="text-gray-300" size={20} />
         </div>
@@ -142,18 +142,18 @@ const Vault: React.FC<VaultProps> = ({ user }) => {
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyPress}
                     placeholder="כתוב כאן..."
-                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 pr-12 text-sm focus:outline-none focus:border-teal-500 transition-colors shadow-sm"
+                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 pr-12 text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-sm"
                 />
                 <button 
                     onClick={handleSend}
                     disabled={!input.trim() || isLoading}
-                    className="absolute left-2 top-2 p-2 text-gray-400 hover:text-teal-600 transition-colors"
+                    className="absolute left-2 top-2 p-2 text-gray-400 hover:text-blue-600 transition-colors"
                 >
                     <Icons.Send size={20} />
                 </button>
             </div>
             <div className="text-center mt-2">
-                <span className="text-[10px] text-gray-400">הכספת היא סביבה פרטית. השיחות נשמרות באופן מאובטח.</span>
+                <span className="text-[10px] text-gray-400">ליווי אישי AI הוא סביבה פרטית. השיחות נשמרות באופן מאובטח.</span>
             </div>
         </div>
     </div>
